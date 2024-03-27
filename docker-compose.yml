@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  debit-charges-frontend:
+    # image: lspeixotodev/debit-charges-frontend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lspeixotodev/debit-charges-frontend
+    container_name: debit-charges-frontend
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - /app/node_modules
